@@ -31,6 +31,7 @@ function crudFunction(method, data = {}, id = "") {
 };
 
 btnGet1.addEventListener('click', function () {
+    const id = document.getElementById('inputGet1Id').value;
     crudFunction("GET");
 });
 
@@ -41,9 +42,13 @@ btnPost.addEventListener('click', function () {
 });
 
 btnPut.addEventListener('click', function () {
+    const id = document.getElementById('inputPutId').value;
+    const nombre = document.getElementById('inputPutNombre').value;
+    const apellido = document.getElementById('inputPutApellido').value;
     crudFunction("PUT");
 })
 
 btnDelete.addEventListener('click', function () {
+    const id = document.getElementById('inputDelete').value;
     crudFunction("DELETE");
 });
